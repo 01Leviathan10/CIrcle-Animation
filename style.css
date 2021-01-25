@@ -1,0 +1,56 @@
+
+*{
+    background-color: #050210;
+}
+
+.circle {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 350px auto;
+    padding: 16px;
+    background: rgb(251,93,173);
+    background: linear-gradient(90deg, rgba(251,93,173,1) 0%, rgba(85,251,159,1) 35%, rgba(185,122,255,1) 100%);
+    border-radius: 150%;
+
+
+    animation-name: animation-circle;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 1s; 
+    animation-timing-function: linear;
+
+}
+
+.circle:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,rgba(251,93,173,1) 0%, rgba(85,251,159,1) 35%,rgba(185,122,255,1) 100%);
+    filter: blur(35px);
+
+}
+
+.circle:after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    left: 25px;
+    border-radius: 50%;
+    background-color:#050210;
+}
+
+@keyframes animation-circle{
+    from{
+        transform: rotate(0deg);
+        }
+    to {
+        transform: rotate(360deg);
+        }
+    }
